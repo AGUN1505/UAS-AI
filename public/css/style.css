@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,79 +7,65 @@
 }
 
 body{
-    background: linear-gradient(black, #38073b);
-    font-family: 'Acme', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #ffffff;
 }
 
 .paralax{
-    position: relative;
-    width: 100%;
-    height: 200vh;
-    padding: 300px;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
     overflow: hidden;
-    /* background-color: #38073b; */
 }
 
-.paralax::before {
-    /* content: ""; */
+.stars, .meteorid, .rocket {
     position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to top,#c4c2c3,transparent );
-    z-index: 1000;
+    height: auto;
 }
-.paralax img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 .text{
-    position: absolute;
-    font-size: 4.8em;
-    color: white;
-    letter-spacing: 2px;
+    font-size: 3rem;
     text-align: center;
-    text-shadow: 3px 3px 10px grey;
-    bottom: -100px;
-}
-.paralax img.meteorid{
-    z-index: 100;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .button{
-    position: absolute;
-    font-size: 1em;
-    color: black;
-    background-color: white;
-    padding: 10px 50px;
-    border-radius: 20px;
-    /* text-decoration: none;
-    transform: translateY(100px); */
-    bottom: -100px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    z-index: 10;
 }
+
+.button:hover {
+    background-color: #45a049;
+}
+
 .description {
-    position: relative;
-    padding:10em;
-    background-color: #c4c2c3;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
 }
+
+.description h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 .description p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
 }
- .description a {
-    position: absolute;
-    font-size: 1em;
-    color: black;
-    background-color: white;
-    padding: 10px 50px;
-    border-radius: 20px;
-    /* text-decoration: none;
-    transform: translateY(100px); */
-    bottom: -100px;
- }
