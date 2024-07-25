@@ -16,14 +16,18 @@
                     </div>
 
                     <div class="card-body">
+                        <!-- Judul hasil perhitungan -->
                         <h2>Hasil</h2>
 
+                        <!-- Menampilkan nama kasus dan nilai X yang diinputkan -->
                         <h6>Nama Kasus: {{ $nama_kasus }}</h6>
                         <h6>Nilai X: {{ $nilai_x }}</h6>
 
+                        <!-- Tabel untuk menampilkan hasil perhitungan -->
                         <table class="table table-bordered mt-4">
                             <thead>
                                 <tr>
+                                    <!-- Header tabel -->
                                     <th>No</th>
                                     <th>Nama Variabel</th>
                                     <th>Semesta Pembicaraan</th>
@@ -34,11 +38,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <!-- Loop untuk menampilkan hasil perhitungan untuk 3 variabel -->
                                 @for ($i = 1; $i <= 3; $i++)
                                     @php
+                                        // Menentukan suffix untuk variabel ke-2 dan ke-3
                                         $suffix = $i > 1 ? $i : '';
                                     @endphp
                                     <tr>
+                                        <!-- Menampilkan data untuk setiap variabel -->
                                         <td>{{ $i }}</td>
                                         <td>{{ ${'nama_varibel' . $suffix} }}</td>
                                         <td>{{ ${'semesta_pembicaraan' . $suffix} }}</td>
